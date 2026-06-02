@@ -462,6 +462,7 @@ input:focus-visible {
   margin-top: 22px;
 }
 
+
 .brand-wall {
   display: flex;
   flex-direction: column;
@@ -1379,11 +1380,6 @@ input:focus-visible {
     color: var(--blue);
   }
 
-  .brand:hover,
-  .socials a:hover,
-  .logos span:hover {
-    transform: translateY(-3px);
-  }
 
   .nav-links a:hover,
   .login:hover,
@@ -1426,6 +1422,7 @@ input:focus-visible {
     filter: saturate(1.12) contrast(1.02);
     box-shadow: var(--hover-shadow);
   }
+
 
   .logos span:hover {
     color: var(--blue);
@@ -1564,15 +1561,6 @@ input:focus-visible {
     line-height: 31px;
   }
 
-  .brand-wall {
-    height: auto;
-    padding: 90px 0;
-  }
-
-  .logos {
-    width: 100%;
-    grid-template-columns: repeat(2, auto);
-  }
 
   .capture,
   .insights,
@@ -1700,10 +1688,6 @@ input:focus-visible {
     display: none;
   }
 
-  .logos {
-    gap: 20px;
-    font-size: 17px;
-  }
 
   .gradient-panel {
     min-height: 360px;

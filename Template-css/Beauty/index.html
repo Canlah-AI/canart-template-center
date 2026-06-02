@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoleCrafters Landing Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scale-shell" id="scaleShell">
+      <main class="canvas" id="canvas" aria-label="SoleCrafters landing page">
+        <nav class="navbar" aria-label="Primary navigation">
+          <a class="logo logo-sm" href="#hero" aria-label="SoleCrafters home">
+            <span>S</span><i aria-hidden="true"></i><span>leCrafters</span>
+          </a>
+          <div class="nav-links">
+            <a href="#men">Man</a>
+            <a href="#women">Women</a>
+            <a href="#collections">Sales</a>
+            <a href="#subscribe">Contact Us</a>
+            <a href="#footer">Others</a>
+          </div>
+          <button class="round-icon nav-search" type="button" aria-label="Search">
+            <span class="icon-search"></span>
+          </button>
+          <button class="round-icon nav-cart" type="button" aria-label="Cart">
+            <span class="icon-bag"></span>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+        </nav>
+
+        <section class="hero" id="hero">
+          <div class="hero-heading">
+            <h1>Sh<span class="shoe-outline" aria-hidden="true"></span>es<br />Everyday!</h1>
+            <p>Certainly, please provide me with a topic or subject you'd like a paragraph about, and I'll be happy to write one for you.</p>
+            <a class="btn hero-btn magnetic" href="#collections">Shop Now!</a>
+          </div>
+
+          <button class="metric-card review-card reveal" type="button">
+            <span class="asterisk">*</span>
+            <strong>Review<br />Products</strong>
+          </button>
+
+          <div class="metric-card stat-card reveal">
+            <strong>35k<span>+</span></strong>
+            <p>Customers who buy our products</p>
+          </div>
+
+          <div class="hero-shoe-card float-soft reveal">
+            <img src="assets/hero-shoe.png" alt="Black leather shoes" />
+          </div>
+          <div class="hero-person-card float-soft reveal">
+            <img src="assets/hero-person.png" alt="Model wearing casual outfit and sneakers" />
+          </div>
+          <p class="hero-copy">Meet our special shoes collections that been trusted y runners and customers for more than 4 years.</p>
+          <a class="scroll-cue" href="#new" aria-label="Scroll to new collection">
+            <span></span>
+          </a>
+        </section>
+
+        <section class="trusted" aria-label="Trusted brands">
+          <p>Trusted by more then 50,000+<br />companies across the globe</p>
+          <div class="brand brand-visa">VISA</div>
+          <div class="brand brand-google">Google</div>
+          <div class="brand brand-puma">PUMA</div>
+          <div class="brand brand-adidas">adidas</div>
+          <div class="brand brand-zara">ZARA</div>
+        </section>
+
+        <section class="new-section" id="new">
+          <h2>A New Fabulous<br /><span>Collections</span> are<br />coming soon!</h2>
+          <div class="image-tile new-left reveal">
+            <img src="assets/body-left-shoe.png" alt="White sneakers close up" />
+          </div>
+          <div class="image-tile new-top reveal">
+            <img src="assets/body-top-shoe.png" alt="White sneaker on foot" />
+          </div>
+          <div class="image-tile new-wide reveal">
+            <img src="assets/body-wide-shoes.png" alt="White sneaker collection" />
+          </div>
+          <div class="desc-card reveal">
+            <span class="asterisk large">*</span>
+            <p>A combination of white and soft pink is our new color for fabulous collection sneaker.</p>
+          </div>
+        </section>
+
+        <section class="growth-section" id="women">
+          <article class="customer-card reveal">
+            <p>Having a team to create design, devolope a rand, and make a product.</p>
+            <div class="avatar-stack" aria-label="Happy customers">
+              <span></span><span></span><span></span><span></span><span></span><strong>+2k</strong>
+            </div>
+            <small>Happy Customers</small>
+          </article>
+          <h2><span>More then 2 Years,</span><br />Duckfeet is constantly<br />growing up.</h2>
+          <h3>Always Making <span class="asterisk text-star">*</span><br />Unique shoes with<br />the best materials.</h3>
+          <div class="feature mini-feature-one reveal">
+            <span><i></i></span>
+            <p>Different design color<br />with others</p>
+          </div>
+          <div class="feature mini-feature-two reveal">
+            <span><i></i></span>
+            <p>Customize the shoes<br />as you like.</p>
+          </div>
+        </section>
+
+        <section class="quality-section" id="men">
+          <div class="quality-bg" aria-hidden="true">
+            <span class="ring ring-one"></span>
+            <span class="ring ring-two"></span>
+            <span class="ring ring-three"></span>
+          </div>
+          <div class="size-guide">
+            <span></span>
+            <ul>
+              <li>Materials and<br />components</li>
+              <li>Size guide, color<br />and style</li>
+              <li>Product description<br />and specification</li>
+            </ul>
+          </div>
+          <img class="quality-shoe float-soft" src="assets/feature-shoe.png" alt="White premium shoes" />
+          <article class="quality-note note-left reveal">
+            <strong>100%</strong>
+            <p>high quality<br />original products</p>
+          </article>
+          <article class="quality-note note-right reveal">
+            <p>Sole unit, is actually made up of two parts, the midsole and the outsole.</p>
+            <a href="#collections">read more <span></span></a>
+          </article>
+          <button class="pin pin-left" type="button" aria-label="Product detail marker"></button>
+          <button class="pin pin-right" type="button" aria-label="Product detail marker"></button>
+        </section>
+
+        <section class="collection-section" id="collections">
+          <header>
+            <h2>Check this out our<br />sweet <span>collections</span></h2>
+            <p>Discover your perimum collections eclusive lifestyle footwear designed for sneaker and shoes running enthusiasts.Made with high quality materials.</p>
+          </header>
+
+          <article class="product-card product-one reveal" data-product="Air Max 2023">
+            <h3>Air Max 2023</h3>
+            <p>$170.24</p>
+            <img class="product-img airmax" src="assets/product-airmax.png" alt="Air Max 2023 shoe" />
+            <button class="add-cart" type="button">Add to Cart <span class="icon-bag"></span></button>
+            <button class="like-btn" type="button" aria-label="Like Air Max 2023"><span></span></button>
+          </article>
+
+          <article class="product-card product-two reveal" data-product="Best Running Shoes">
+            <h3>Best Running Shoes</h3>
+            <p>$170.24</p>
+            <img class="product-img running" src="assets/product-running.png" alt="Black running shoe" />
+            <button class="add-cart" type="button">Add to Cart <span class="icon-bag"></span></button>
+            <button class="like-btn" type="button" aria-label="Like Best Running Shoes"><span></span></button>
+          </article>
+
+          <article class="product-card product-three reveal" data-product="Man millan best shoes">
+            <h3>Man millan best shoes</h3>
+            <p>$170.24</p>
+            <img class="product-img tan" src="assets/product-tan.png" alt="Tan and black sneaker" />
+            <button class="add-cart" type="button">Add to Cart <span class="icon-bag"></span></button>
+            <button class="like-btn" type="button" aria-label="Like Man millan best shoes"><span></span></button>
+          </article>
+
+          <a class="more-collection magnetic" href="#subscribe">More Collection</a>
+        </section>
+
+        <section class="subscribe-section" id="subscribe">
+          <h2>Subscribe to<br />newsletter</h2>
+          <form id="subscribeForm" novalidate>
+            <label>
+              <span class="sr-only">Email</span>
+              <input id="emailInput" type="email" placeholder="Enter your email" autocomplete="email" />
+            </label>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="form-message" id="formMessage" aria-live="polite"></p>
+          <img class="newsletter-shoe float-soft" src="assets/newsletter-shoe.png" alt="Black and white shoes" />
+        </section>
+
+        <footer class="footer" id="footer">
+          <div class="footer-brand">
+            <a class="logo logo-lg" href="#hero" aria-label="SoleCrafters home">
+              <span>S</span><i aria-hidden="true"></i><span>leCrafters</span>
+            </a>
+            <p>Certainly, please provide me with a topic or subject you'd like a paragraph about, and I'll be happy to write one for you.</p>
+          </div>
+          <ul class="footer-list list-one">
+            <li><a href="#new">New Arrival</a></li>
+            <li><a href="#collections">Best Sallers</a></li>
+            <li><a href="#men">Man Shoes</a></li>
+            <li><a href="#women">Women Shoes</a></li>
+            <li><a href="#collections">Collection</a></li>
+          </ul>
+          <ul class="footer-list list-two">
+            <li><a href="#">TikTok</a></li>
+            <li><a href="#">Snapchat</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Linked in</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+          <ul class="footer-list list-three">
+            <li><a href="#subscribe">Contact US</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+          <p class="agency">Agency Owner?<br />We can help you</p>
+          <p class="copyright">&copy; 2023 SoleCrafters. All rights reserved</p>
+        </footer>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
