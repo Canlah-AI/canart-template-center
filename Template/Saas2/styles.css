@@ -1,0 +1,541 @@
+:root {
+  color-scheme: dark;
+  background: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: #000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.page {
+  width: 100%;
+  background: #000;
+}
+
+.design-frame {
+  position: relative;
+  width: min(100vw, 1920px);
+  margin: 0 auto;
+}
+
+.design {
+  display: block;
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.hotspots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.anchor {
+  position: absolute;
+  left: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.anchor-top {
+  top: 0;
+}
+
+.anchor-features {
+  top: 19.56%;
+}
+
+.anchor-about,
+.anchor-blog,
+.anchor-contact {
+  top: 93.98%;
+}
+
+.anchor-pricing,
+.anchor-trial {
+  top: 84.54%;
+}
+
+.anchor-demo {
+  top: 6.54%;
+}
+
+.hotspot {
+  --hover-bg: rgba(255, 255, 255, 0.08);
+  --hover-border: rgba(255, 255, 255, 0.62);
+  --hover-shadow: 0 18px 46px rgba(17, 69, 198, 0.36);
+  --label-size: clamp(10px, 0.95vw, 18px);
+  --radius: 999px;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  color: transparent;
+  font-size: 0;
+  white-space: nowrap;
+  border-radius: var(--radius);
+  pointer-events: auto;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hotspot::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  border: 2px solid var(--hover-border);
+  border-radius: inherit;
+  background: var(--hover-bg);
+  box-shadow: var(--hover-shadow);
+  opacity: 0;
+  transform: scale(0.986);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.hotspot:hover::before,
+.hotspot:focus-visible::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hotspot:active::before {
+  transform: scale(0.975);
+}
+
+.hotspot:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px;
+}
+
+.hover-card {
+  --radius: clamp(18px, 3.12vw, 60px);
+}
+
+.hover-card::after,
+.hover-brand::after,
+.hover-social::after {
+  position: absolute;
+  left: clamp(8px, 1.6vw, 28px);
+  top: clamp(8px, 1.2vw, 22px);
+  z-index: 2;
+  max-width: calc(100% - 16px);
+  padding: clamp(5px, 0.55vw, 10px) clamp(8px, 0.9vw, 16px);
+  overflow: hidden;
+  color: #07112a;
+  font-size: var(--label-size);
+  font-weight: 700;
+  line-height: 1;
+  text-overflow: ellipsis;
+  content: attr(data-label);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  border-radius: 999px;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+}
+
+.hover-card:hover::after,
+.hover-card:focus-visible::after,
+.hover-brand:hover::after,
+.hover-brand:focus-visible::after,
+.hover-social:hover::after,
+.hover-social:focus-visible::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hover-button {
+  --radius: 0;
+  --hover-bg: linear-gradient(
+    110deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.54),
+    rgba(255, 255, 255, 0.05)
+  );
+  --hover-border: rgba(255, 255, 255, 0.8);
+  --hover-shadow: 0 14px 34px rgba(255, 255, 255, 0.24);
+}
+
+.hover-link {
+  --hover-shadow: none;
+  --hover-border: transparent;
+  --hover-bg: transparent;
+  overflow: visible;
+}
+
+.hover-link::before {
+  inset: auto 0 -0.18em;
+  height: 2px;
+  border: 0;
+  background: currentColor;
+  box-shadow: none;
+  opacity: 0;
+  transform: scaleX(0.35);
+  transform-origin: center;
+}
+
+.hover-link:hover::before,
+.hover-link:focus-visible::before {
+  color: #fff;
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.hover-brand {
+  --radius: 14px;
+  --hover-bg: rgba(255, 255, 255, 0.12);
+  --hover-shadow: 0 14px 34px rgba(148, 228, 253, 0.28);
+}
+
+.hover-social {
+  --radius: 8px;
+  --label-size: clamp(9px, 0.75vw, 13px);
+  overflow: visible;
+}
+
+.hover-social::after {
+  left: 50%;
+  top: auto;
+  bottom: calc(100% + 8px);
+  transform: translate(-50%, 6px);
+}
+
+.hover-social:hover::after,
+.hover-social:focus-visible::after {
+  transform: translate(-50%, 0);
+}
+
+.logo-top {
+  left: 10.42%;
+  top: 0.34%;
+  width: 13%;
+  height: 0.84%;
+}
+
+.nav-features {
+  left: 36.07%;
+  top: 0.63%;
+  width: 3.96%;
+  height: 0.28%;
+}
+
+.nav-about {
+  left: 42.32%;
+  top: 0.63%;
+  width: 4.32%;
+  height: 0.28%;
+}
+
+.nav-pricing {
+  left: 48.93%;
+  top: 0.63%;
+  width: 3.13%;
+  height: 0.28%;
+}
+
+.nav-blog {
+  left: 54.35%;
+  top: 0.63%;
+  width: 2.14%;
+  height: 0.28%;
+}
+
+.nav-contact {
+  left: 58.78%;
+  top: 0.63%;
+  width: 5.16%;
+  height: 0.28%;
+}
+
+.nav-trial {
+  left: 80.16%;
+  top: 0.37%;
+  width: 9.43%;
+  height: 0.79%;
+}
+
+.hero-demo {
+  left: 44.48%;
+  top: 6.54%;
+  width: 11.04%;
+  height: 0.89%;
+}
+
+.cta {
+  left: 41.79%;
+  top: 90.27%;
+  width: 16.41%;
+  height: 0.89%;
+}
+
+.hero-panel {
+  left: 1.55%;
+  top: 1.53%;
+  width: 96.9%;
+  height: 16.04%;
+}
+
+.hero-avatars {
+  left: 7.14%;
+  top: 8.35%;
+  width: 85.73%;
+  height: 5.78%;
+}
+
+.brand-google {
+  left: 10.38%;
+  top: 16.3%;
+  width: 6.33%;
+  height: 0.51%;
+}
+
+.brand-lotte {
+  left: 22.05%;
+  top: 16.32%;
+  width: 8.14%;
+  height: 0.48%;
+}
+
+.brand-naver {
+  left: 35.54%;
+  top: 16.35%;
+  width: 8.64%;
+  height: 0.43%;
+}
+
+.brand-paypal {
+  left: 49.55%;
+  top: 16.3%;
+  width: 7.52%;
+  height: 0.51%;
+}
+
+.brand-bosch {
+  left: 62.41%;
+  top: 16.3%;
+  width: 8.18%;
+  height: 0.51%;
+}
+
+.brand-techcrunch {
+  left: 75.96%;
+  top: 16.3%;
+  width: 13.66%;
+  height: 0.51%;
+}
+
+.feature-team {
+  left: 10.42%;
+  top: 23.04%;
+  width: 79.2%;
+  height: 6.13%;
+}
+
+.feature-scale {
+  left: 10.42%;
+  top: 29.44%;
+  width: 39.01%;
+  height: 6.35%;
+}
+
+.feature-analytics {
+  left: 50.55%;
+  top: 29.44%;
+  width: 39.01%;
+  height: 6.35%;
+}
+
+.dashboard-card {
+  left: 10.4%;
+  top: 42.66%;
+  width: 79.2%;
+  height: 11.33%;
+}
+
+.payment-card {
+  left: 10.42%;
+  top: 58.84%;
+  width: 39.01%;
+  height: 6.13%;
+}
+
+.platform-card {
+  left: 50.55%;
+  top: 58.84%;
+  width: 39.01%;
+  height: 6.13%;
+}
+
+.support-card {
+  left: 10.42%;
+  top: 65.25%;
+  width: 39.01%;
+  height: 6.35%;
+}
+
+.insights-card {
+  left: 50.55%;
+  top: 65.25%;
+  width: 39.01%;
+  height: 6.35%;
+}
+
+.autopilot-card {
+  left: 10.4%;
+  top: 72.88%;
+  width: 79.2%;
+  height: 10.39%;
+}
+
+.cta-panel {
+  left: 10.42%;
+  top: 84.54%;
+  width: 79.17%;
+  height: 8.17%;
+}
+
+.footer-logo {
+  left: 10.4%;
+  top: 93.98%;
+  width: 14.88%;
+  height: 1.02%;
+}
+
+.footer-about {
+  left: 34.17%;
+  top: 93.98%;
+  width: 6.77%;
+  height: 2.81%;
+}
+
+.footer-features {
+  left: 48.22%;
+  top: 93.98%;
+  width: 4.38%;
+  height: 1.69%;
+}
+
+.footer-style {
+  left: 59.87%;
+  top: 93.98%;
+  width: 8.18%;
+  height: 2.25%;
+}
+
+.footer-contact {
+  left: 75.33%;
+  top: 93.98%;
+  width: 14.27%;
+  height: 3.32%;
+}
+
+.social-facebook {
+  left: 10.4%;
+  top: 96.95%;
+  width: 2.08%;
+  height: 0.51%;
+}
+
+.social-twitter {
+  left: 13.11%;
+  top: 96.95%;
+  width: 2.08%;
+  height: 0.51%;
+}
+
+.social-instagram {
+  left: 15.82%;
+  top: 96.95%;
+  width: 2.08%;
+  height: 0.51%;
+}
+
+.social-linkedin {
+  left: 18.52%;
+  top: 96.95%;
+  width: 2.08%;
+  height: 0.51%;
+}
+
+.social-youtube {
+  left: 21.23%;
+  top: 96.95%;
+  width: 2.08%;
+  height: 0.51%;
+}
+
+.footer-license-left {
+  left: 10.4%;
+  top: 99.38%;
+  width: 15.73%;
+  height: 0.33%;
+}
+
+.footer-license-center {
+  left: 38.54%;
+  top: 99.38%;
+  width: 22.92%;
+  height: 0.33%;
+}
+
+.footer-license-right {
+  left: 74.31%;
+  top: 99.38%;
+  width: 15.31%;
+  height: 0.33%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hotspot::before,
+  .hotspot::after {
+    transition: none;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (min-width: 1921px) {
+  body {
+    background:
+      linear-gradient(90deg, #000, #030303 18%, #030303 82%, #000);
+  }
+}
