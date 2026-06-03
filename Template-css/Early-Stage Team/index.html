@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ElevateX Landing Page</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <header class="site-nav" aria-label="Primary navigation">
+      <div class="nav-inner">
+        <a class="brand" href="#top" aria-label="ElevateX home">
+          <img src="assets/logo-mark.svg" alt="" />
+          <span>ElevateX</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav-links" id="nav-links">
+          <a href="#sales">Sales</a>
+          <a href="#pricing">Pricing</a>
+          <a href="#features">Features</a>
+          <a href="#tools">Features</a>
+          <a href="#solutions">Solutions</a>
+          <a href="#more">more</a>
+        </nav>
+        <a class="nav-cta interactive" href="#trial">Register</a>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell" id="sales">
+        <div class="hero-copy-block reveal">
+          <h1 class="hero-title" aria-label="Scale smarter. Grow faster. Win more.">
+            <span>Scale Smarter.</span>
+            <span class="hero-title-row">
+              <span class="hero-emoji" aria-hidden="true">🌞</span>
+              Grow Faster.
+            </span>
+            <span>Win More.</span>
+          </h1>
+          <div class="hero-side">
+            <p>
+              The first modern sales engagement platform to efficiently create pipeline &amp; close more deals paired with a talent marketplace, to instantly hire, scale &amp; drive revenue faster.
+            </p>
+            <a class="btn btn-purple interactive" href="#trial">Being your 7 day free trials</a>
+          </div>
+        </div>
+
+        <div class="brand-strip reveal">
+          <p>Trusted by 4,000 leading companies</p>
+          <div class="trusted-logos" aria-label="Trusted company logos">
+            <span class="tc-logo">TC <b>TechCrunch</b></span>
+            <span>Forbes</span>
+            <span>software</span>
+            <span>On Deck</span>
+            <span>aumni</span>
+            <span>CNBC</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="dashboard-section section-shell" id="pricing">
+        <div class="section-heading reveal">
+          <h2>Activate a Suite of modern sales tool &amp; avoid sprawling tech stacks.</h2>
+          <a class="btn btn-purple interactive" href="#trial">Get Started Today</a>
+        </div>
+
+        <div class="dashboard-shell reveal" aria-label="Sales dashboard preview">
+          <aside class="dash-sidebar" aria-hidden="true">
+            <img src="assets/logo-mark.svg" alt="" class="dash-logo" />
+            <span class="side-icon active"></span>
+            <span class="side-icon"></span>
+            <span class="side-icon"></span>
+            <span class="side-icon"></span>
+            <span class="side-divider"></span>
+            <span class="side-icon"></span>
+            <span class="side-icon"></span>
+            <span class="avatar"></span>
+          </aside>
+
+          <div class="dash-welcome">
+            <span>Thursday, December 5</span>
+            <strong>Welcome back John</strong>
+          </div>
+
+          <div class="lead-panel">
+            <h3>Lead Highlights</h3>
+            <p>8 Highlights you need attention</p>
+            <button class="message-alert interactive" type="button">
+              <span></span>
+              04 Unread message
+              <b></b>
+            </button>
+          </div>
+
+          <article class="chart-card panel interactive">
+            <div class="metric-grid">
+              <div><span>Calls Made</span><strong>48.6k</strong></div>
+              <div><span>Email Sent</span><strong>18.9k</strong></div>
+              <div><span>Total</span><strong>34.2k</strong></div>
+            </div>
+            <div class="chart-actions">
+              <button class="tab-chip active" type="button">Daily active users</button>
+              <button class="tab-chip" type="button">Last 28 days</button>
+            </div>
+            <div class="line-chart" aria-hidden="true">
+              <div class="axis-y">
+                <span>300</span><span>250</span><span>200</span><span>150</span><span>100</span><span>50</span>
+              </div>
+              <svg viewBox="0 0 780 360" role="img" aria-label="Monthly performance line chart">
+                <g class="grid">
+                  <line x1="0" x2="780" y1="30" y2="30"></line>
+                  <line x1="0" x2="780" y1="92" y2="92"></line>
+                  <line x1="0" x2="780" y1="154" y2="154"></line>
+                  <line x1="0" x2="780" y1="216" y2="216"></line>
+                  <line x1="0" x2="780" y1="278" y2="278"></line>
+                  <line x1="0" x2="780" y1="340" y2="340"></line>
+                </g>
+                <path class="ghost-line" d="M20 310 L120 250 L190 285 L270 210 L365 260 L450 226 L560 286 L650 200 L760 250"></path>
+                <path class="main-line" d="M20 278 L115 205 L180 248 L265 128 L345 304 L430 205 L545 187 L630 92 L760 138"></path>
+              </svg>
+              <div class="months"><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span></div>
+            </div>
+          </article>
+
+          <article class="mini-card lead-status panel interactive">
+            <div class="mini-head">
+              <strong>Lead Status</strong>
+              <button class="tab-chip" type="button">Last 28 days</button>
+            </div>
+            <span class="marker">1.8k</span>
+            <div class="bar-chart" aria-hidden="true">
+              <i style="--h: 64%"></i>
+              <i style="--h: 82%"></i>
+              <i style="--h: 42%"></i>
+              <i class="hot" style="--h: 100%"></i>
+              <i style="--h: 64%"></i>
+              <i style="--h: 12%"></i>
+              <i style="--h: 70%"></i>
+            </div>
+            <div class="bar-months"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span></div>
+          </article>
+
+          <article class="mini-card mau-card panel interactive">
+            <div class="mini-head">
+              <div><span>MAU</span><strong>Mar 2023</strong></div>
+              <button class="tab-chip" type="button">Last 28 days</button>
+            </div>
+            <div class="mau-stat">
+              <strong>96k</strong>
+              <span>Marketing Campaign effectivess</span>
+            </div>
+            <svg class="spark" viewBox="0 0 180 130" aria-hidden="true">
+              <path d="M5 118 L32 88 L58 104 L84 66 L113 80 L143 42 L175 22"></path>
+            </svg>
+          </article>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <div class="feature-row feature-one">
+          <div class="feature-text reveal">
+            <h2>Faster, More Accurate, Power Dialer.</h2>
+            <p>No additional setup required. Audio settings, smart dial filtering, caller ID testing and an interface with everything you'll need on a call.</p>
+            <a class="btn btn-purple interactive" href="#more">read more</a>
+          </div>
+          <div class="feature-visual dialer-card reveal interactive" aria-label="Power dialer preview">
+            <div class="call-pill">Prepairing call...</div>
+            <div class="dialer-line"></div>
+            <div class="caller-card">
+              <span class="initials">LK</span>
+              <div>
+                <strong>Louis Krumwiede</strong>
+                <small><b></b>Phone <b></b>Mobile</small>
+              </div>
+              <button type="button">Calling leading in 3..</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-row feature-two">
+          <div class="feature-visual email-card reveal interactive">
+            <img class="email-main" src="assets/email-main.png" alt="Email editor interface" />
+            <img class="email-panel" src="assets/email-panel.png" alt="" />
+          </div>
+          <div class="feature-text reveal">
+            <h2>Email at Scale, Spot Errors Instantly.</h2>
+            <p>Built from the ground up with consideration to advanced error handling, email warm up &amp; individualized sending to ensure emails are properly tracked &amp; avoid spam folders.</p>
+            <a class="btn btn-purple interactive" href="#more">read more</a>
+          </div>
+        </div>
+
+        <div class="feature-row feature-three">
+          <div class="feature-text reveal">
+            <h2>Track Activities on Every Lead</h2>
+            <p>Get detailed activity tracking, from updated information to emails sent and even incoming calls. Never be in the dark with leads worked.</p>
+            <a class="btn btn-purple interactive" href="#more">read more</a>
+          </div>
+          <div class="feature-visual activity-card reveal">
+            <article class="activity-row interactive">
+              <img src="assets/call-1.svg" alt="" />
+              <p><span>Incoming call from</span> John Tice <span>to</span> Zack</p>
+            </article>
+            <article class="activity-row interactive">
+              <img src="assets/call-2.svg" alt="" />
+              <p><span>Incoming call from</span> Sarah <span>to</span> Greg</p>
+            </article>
+            <article class="activity-row selected interactive">
+              <img src="assets/call-3.svg" alt="" />
+              <p>John Tice <span>updated lead info</span> Email</p>
+            </article>
+            <article class="activity-row interactive">
+              <img src="assets/call-4.svg" alt="" />
+              <p><span>Outgoing call from</span> John Tice <span>to</span> Mariell</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="marketplace section-shell" id="solutions">
+        <h2 class="market-heading reveal">The tools &amp; intelligence you need paired with a freelance marketplace to engage prospects, drive opportunities &amp; forecast accurately to scale faster.</h2>
+        <div class="market-grid">
+          <article class="market-card market-left reveal interactive">
+            <p>Internal team</p>
+            <h3>Build a team from scratch</h3>
+            <img src="assets/team-build.png" alt="Sales team in a workspace" />
+          </article>
+          <article class="market-card market-right reveal interactive">
+            <p>Especiall team</p>
+            <h3>Supercharge your team</h3>
+            <img src="assets/team-supercharge.png" alt="Smiling sales team member in a meeting" />
+            <span>You had an idea and you built the product. But you need a team to sell it now. Build your core sales team from scratch on SellX -- or scale beyond your current team to help grow existing or additional lines of business -- while keeping your core team focused.</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="proof section-shell" id="more">
+        <h2 class="proof-heading reveal">Join the fast growing companies, already seeing a difference.</h2>
+        <div class="proof-grid">
+          <article class="proof-card reveal interactive">
+            <strong>INT<br />MAGIC</strong>
+            <p>Reached thousands of customers with over $2M pipelines, raising $254M in funding.</p>
+          </article>
+          <article class="proof-card reveal interactive">
+            <strong class="deck-logo">On Deck</strong>
+            <p>Increased community impact and outbound reach by 87 percent</p>
+          </article>
+          <article class="proof-card reveal interactive">
+            <strong>CNBC</strong>
+            <p>Validate product market fit, generating $750k in pipeline &amp; raising $2.6M</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="trial section-shell reveal" id="trial">
+        <h2>Start your<br />14 days free trial</h2>
+        <div class="trial-actions">
+          <a class="btn btn-light interactive" href="mailto:hello@website.com">Speak with our team</a>
+          <a class="btn btn-outline interactive" href="#top">Get Started</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer section-shell">
+      <div class="footer-brand reveal">
+        <a class="brand" href="#top" aria-label="ElevateX home">
+          <img src="assets/footer-logo-mark.svg" alt="" />
+          <span>ElevateX</span>
+        </a>
+        <p>The first modern sales engagement platform to efficiently create pipeline &amp; close more deals paired with a talent marketplace, to instantly hire, scale &amp; drive revenue faster.</p>
+        <a class="btn btn-purple interactive" href="#trial">Buy Template</a>
+      </div>
+      <nav class="footer-menu reveal" aria-label="Footer menu">
+        <h3>Menu</h3>
+        <a href="#top">About US</a>
+        <a href="#sales">Sales</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#features">Feature</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#more">more</a>
+      </nav>
+      <nav class="footer-pages reveal" aria-label="Footer pages">
+        <h3>Pages</h3>
+        <a href="#top">Login</a>
+        <a href="#top">404 Page</a>
+        <a href="#top">Design System</a>
+        <a href="#top">API docs</a>
+        <a href="#top">License</a>
+        <a href="#top">Product Updates</a>
+      </nav>
+      <div class="footer-address reveal">
+        <h3>Address</h3>
+        <p>Riverside 25, San Francisco, California<br /><a href="#top">View on Maps</a></p>
+        <h3>Inquiries</h3>
+        <p><a href="tel:800234567">800 234 567</a><br /><a href="mailto:hello@website.com">hello@website.com</a></p>
+        <div class="socials">
+          <a class="interactive" href="#top" aria-label="Twitter"><img src="assets/twitter.svg" alt="" /></a>
+          <a class="interactive" href="#top" aria-label="Facebook"><img src="assets/facebook.svg" alt="" /></a>
+          <a class="interactive" href="#top" aria-label="LinkedIn"><img src="assets/linkedin.svg" alt="" /></a>
+          <a class="interactive" href="#top" aria-label="YouTube"><img src="assets/youtube.svg" alt="" /></a>
+          <a class="interactive" href="#top" aria-label="Instagram"><img src="assets/instagram.svg" alt="" /></a>
+        </div>
+        <div class="store-links">
+          <img src="assets/app-store.png" alt="Download on the App Store" />
+          <img src="assets/google-play.png" alt="Get it on Google Play" />
+        </div>
+      </div>
+      <div class="legal">
+        <p>&copy; 2022 Elevate. All rights reserved&nbsp;&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&nbsp;Cookie Settings, Anti-Spam, Privacy, User agreement, Legal Notice and Responsible Disclosure</p>
+      </div>
+    </footer>
+
+    <div class="toast" role="status" aria-live="polite">Thanks, we will be in touch.</div>
+    <script src="script.js"></script>
+  </body>
+</html>
