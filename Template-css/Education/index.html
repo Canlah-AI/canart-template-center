@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Education landing page recreated from the provided Figma design."
+    />
+    <title>Education Landing Page</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main class="page-shell" aria-label="Education landing page">
+      <div class="landing-stage" id="landingStage">
+        <img
+          class="figma-page"
+          src="./assets/education-landing-figma.png"
+          width="1920"
+          height="7444"
+          alt="Education landing page with therapy service sections, resource cards, testimonials, workshops, newsletter and footer."
+        />
+
+        <div class="interaction-layer" aria-label="Interactive landing page controls">
+          <a class="hotspot nav-hotspot" href="#about" style="--x:39.1146%; --y:0.5105%; --w:4.2188%; --h:0.3627%" data-scroll-y="1080">
+            <span class="sr-only">About Us</span>
+          </a>
+          <a class="hotspot nav-hotspot" href="#services" style="--x:45.4167%; --y:0.5105%; --w:3.8021%; --h:0.3627%" data-scroll-y="4863">
+            <span class="sr-only">Services</span>
+          </a>
+          <a class="hotspot nav-hotspot" href="#shop" style="--x:51.3021%; --y:0.5105%; --w:2.3958%; --h:0.3627%" data-scroll-y="5644">
+            <span class="sr-only">Shop</span>
+          </a>
+          <a class="hotspot nav-hotspot" href="#contact" style="--x:55.7813%; --y:0.5105%; --w:5.1042%; --h:0.3627%" data-scroll-y="6340">
+            <span class="sr-only">Contact Us</span>
+          </a>
+
+          <button class="hotspot pill-hotspot light" style="--x:82.8125%; --y:0.1881%; --w:8.9063%; --h:0.9538%" data-modal-title="Get help" data-modal-body="Tell us what kind of support you need and we will guide you to the right session.">
+            <span class="sr-only">Get Help</span>
+          </button>
+          <button class="hotspot pill-hotspot primary" style="--x:8.3854%; --y:10.5588%; --w:8.9063%; --h:0.9538%" data-modal-title="Start with support" data-modal-body="Book a first conversation and we will help you choose the next practical step.">
+            <span class="sr-only">Get Help in hero section</span>
+          </button>
+          <button class="hotspot pill-hotspot light" style="--x:51.3542%; --y:22.3133%; --w:8.9063%; --h:0.9538%" data-modal-title="Therapeutic consultation" data-modal-body="Share a short note about your goals and our team will suggest a consultation path.">
+            <span class="sr-only">Get Help in therapeutic section</span>
+          </button>
+          <button class="hotspot pill-hotspot light" style="--x:8.3854%; --y:49.0999%; --w:8.9063%; --h:0.9538%" data-modal-title="Confidence support" data-modal-body="Explore age-friendly confidence coaching and guided support options.">
+            <span class="sr-only">Get Help in confidence section</span>
+          </button>
+          <button class="hotspot pill-hotspot primary" style="--x:54.3229%; --y:72.4476%; --w:8.9063%; --h:0.9538%" data-modal-title="Service help" data-modal-body="Choose a service track and we will prepare a short next-step plan.">
+            <span class="sr-only">Get Help in services section</span>
+          </button>
+          <button class="hotspot pill-hotspot light" style="--x:45.5729%; --y:90.3412%; --w:8.9063%; --h:0.9538%" data-modal-title="Newsletter" data-modal-body="Join the newsletter for workshop updates and short mental health resources.">
+            <span class="sr-only">Subscribe newsletter</span>
+          </button>
+
+          <button class="hotspot card-hotspot" style="--x:8.3854%; --y:32.2542%; --w:26.1979%; --h:6.69%" data-toast="In tuned therapeutic selected">
+            <span class="sr-only">In tuned therapeutic resource card</span>
+          </button>
+          <button class="hotspot card-hotspot blue" style="--x:36.9271%; --y:32.2542%; --w:26.1979%; --h:6.69%" data-toast="In person evaluation case management selected">
+            <span class="sr-only">In person evaluation case management resource card</span>
+          </button>
+          <button class="hotspot card-hotspot" style="--x:65.4688%; --y:32.2542%; --w:26.1979%; --h:6.69%" data-toast="Occupational performances selected">
+            <span class="sr-only">Occupational performances resource card</span>
+          </button>
+
+          <button class="hotspot card-hotspot story" style="--x:60.5208%; --y:42.6115%; --w:31.1458%; --h:7.6706%" data-toast="Helping to Navigate card selected">
+            <span class="sr-only">Helping to Navigate card</span>
+          </button>
+          <button class="hotspot text-link-hotspot" style="--x:62.5%; --y:49.5298%; --w:4.2708%; --h:0.2687%" data-toast="Opening more details soon">
+            <span class="sr-only">View more</span>
+          </button>
+
+          <button class="hotspot testimonial-hotspot" style="--x:27.0833%; --y:56.7437%; --w:45.7813%; --h:4.8092%" data-toast="Testimonial highlighted">
+            <span class="sr-only">Customer testimonial</span>
+          </button>
+
+          <button class="hotspot row-hotspot" style="--x:8.3333%; --y:66.1472%; --w:33.75%; --h:1.9344%" data-toast="Explore step selected">
+            <span class="sr-only">Explore step</span>
+          </button>
+          <button class="hotspot row-hotspot" style="--x:8.3333%; --y:68.7399%; --w:33.75%; --h:1.9344%" data-toast="Choose step selected">
+            <span class="sr-only">Choose step</span>
+          </button>
+          <button class="hotspot row-hotspot" style="--x:8.3333%; --y:71.3326%; --w:33.75%; --h:1.9344%" data-toast="Start step selected">
+            <span class="sr-only">Start step</span>
+          </button>
+
+          <button class="hotspot workshop-hotspot pink" style="--x:8.3854%; --y:77.8076%; --w:26.5625%; --h:4.9436%" data-event-title="FREE In-Tuned Therapeutic Groups Parent Seminar" data-event-date="20-Apr-2023">
+            <span class="sr-only">First workshop card</span>
+          </button>
+          <button class="hotspot workshop-hotspot yellow" style="--x:36.7708%; --y:77.8076%; --w:26.5625%; --h:4.9436%" data-event-title="Autism Spectrum Disorder Update" data-event-date="20-Apr-2023">
+            <span class="sr-only">Second workshop card</span>
+          </button>
+          <button class="hotspot workshop-hotspot blue" style="--x:65.1563%; --y:77.8076%; --w:26.5625%; --h:4.9436%" data-event-title="Autism Spectrum Disorder Update" data-event-date="20-Apr-2023">
+            <span class="sr-only">Third workshop card</span>
+          </button>
+          <button class="hotspot mini-pill-hotspot" style="--x:10.3646%; --y:81.6497%; --w:6.9792%; --h:0.6179%" data-event-title="FREE In-Tuned Therapeutic Groups Parent Seminar" data-event-date="20-Apr-2023">
+            <span class="sr-only">View first event</span>
+          </button>
+          <button class="hotspot mini-pill-hotspot dark" style="--x:38.75%; --y:81.6497%; --w:6.9792%; --h:0.6179%" data-event-title="Autism Spectrum Disorder Update" data-event-date="20-Apr-2023">
+            <span class="sr-only">View second event</span>
+          </button>
+          <button class="hotspot mini-pill-hotspot" style="--x:67.1354%; --y:81.6497%; --w:6.9792%; --h:0.6179%" data-event-title="Autism Spectrum Disorder Update" data-event-date="20-Apr-2023">
+            <span class="sr-only">View third event</span>
+          </button>
+
+          <button class="hotspot social-hotspot" style="--x:10.4167%; --y:96.2923%; --w:1.615%; --h:0.403%" data-toast="Twitter link selected">
+            <span class="sr-only">Twitter</span>
+          </button>
+          <button class="hotspot social-hotspot" style="--x:13.72%; --y:96.2923%; --w:1.55%; --h:0.403%" data-toast="Facebook link selected">
+            <span class="sr-only">Facebook</span>
+          </button>
+          <button class="hotspot social-hotspot" style="--x:16.84%; --y:96.2923%; --w:1.38%; --h:0.403%" data-toast="LinkedIn link selected">
+            <span class="sr-only">LinkedIn</span>
+          </button>
+          <button class="hotspot social-hotspot" style="--x:19.94%; --y:96.2923%; --w:1.68%; --h:0.403%" data-toast="YouTube link selected">
+            <span class="sr-only">YouTube</span>
+          </button>
+
+          <a class="hotspot footer-link-hotspot" href="#about" style="--x:40.1563%; --y:94.8684%; --w:5.4688%; --h:0.403%" data-scroll-y="1080">
+            <span class="sr-only">Footer About link</span>
+          </a>
+          <a class="hotspot footer-link-hotspot" href="#services" style="--x:40.1563%; --y:95.6744%; --w:5.4688%; --h:0.403%" data-scroll-y="4863">
+            <span class="sr-only">Footer Service link</span>
+          </a>
+          <a class="hotspot footer-link-hotspot" href="#shop" style="--x:40.1563%; --y:96.4804%; --w:5.4688%; --h:0.403%" data-scroll-y="5644">
+            <span class="sr-only">Footer Shop link</span>
+          </a>
+          <a class="hotspot footer-link-hotspot" href="#contact" style="--x:40.1563%; --y:97.2864%; --w:5.4688%; --h:0.403%" data-scroll-y="6340">
+            <span class="sr-only">Footer Contact link</span>
+          </a>
+          <button class="hotspot footer-link-hotspot" style="--x:56.6667%; --y:94.8684%; --w:8.8542%; --h:0.403%" data-toast="Privacy Policy selected">
+            <span class="sr-only">Privacy Policy</span>
+          </button>
+          <button class="hotspot footer-link-hotspot" style="--x:56.6667%; --y:95.6744%; --w:9.8958%; --h:0.403%" data-toast="Terms and Conditions selected">
+            <span class="sr-only">Terms and Conditions</span>
+          </button>
+          <button class="hotspot footer-link-hotspot" style="--x:56.6667%; --y:96.4804%; --w:6.25%; --h:0.403%" data-toast="Explore selected">
+            <span class="sr-only">Explore</span>
+          </button>
+          <button class="hotspot footer-link-hotspot" style="--x:56.6667%; --y:97.2864%; --w:8.8542%; --h:0.403%" data-toast="Accessibility selected">
+            <span class="sr-only">Accessibility</span>
+          </button>
+          <button class="hotspot footer-link-hotspot" style="--x:77.3958%; --y:94.8684%; --w:11.9792%; --h:0.806%" data-toast="Address copied for demo">
+            <span class="sr-only">Address</span>
+          </button>
+          <button class="hotspot footer-link-hotspot" style="--x:77.3958%; --y:96.4804%; --w:9.375%; --h:0.403%" data-toast="Phone selected">
+            <span class="sr-only">Phone</span>
+          </button>
+          <button class="hotspot footer-link-hotspot" style="--x:77.3958%; --y:97.2864%; --w:11.9792%; --h:0.403%" data-toast="Email selected">
+            <span class="sr-only">Email</span>
+          </button>
+
+          <span class="ambient-pulse yellow" style="--x:56.1%; --y:2.68%; --w:5.25%; --h:0.72%"></span>
+          <span class="ambient-pulse pink" style="--x:85.98%; --y:2.62%; --w:5.3%; --h:0.74%"></span>
+          <span class="ambient-pulse blue" style="--x:85.6%; --y:11.22%; --w:5.7%; --h:0.78%"></span>
+        </div>
+      </div>
+    </main>
+
+    <div class="modal" id="actionModal" hidden>
+      <button class="modal-backdrop" type="button" data-close-modal aria-label="Close dialog"></button>
+      <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" data-close-modal aria-label="Close dialog">x</button>
+        <p class="modal-kicker">Tinker Sanctuary</p>
+        <h2 id="modalTitle">Get help</h2>
+        <p id="modalBody">Tell us what kind of support you need and we will guide you to the right session.</p>
+        <form class="modal-form" id="supportForm">
+          <label>
+            <span>Name</span>
+            <input type="text" name="name" autocomplete="name" placeholder="Your name" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" autocomplete="email" placeholder="you@example.com" />
+          </label>
+          <button class="modal-submit" type="submit">Send request</button>
+        </form>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  </body>
+</html>

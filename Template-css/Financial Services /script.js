@@ -94,17 +94,8 @@ function animateCounter() {
   if (!counter || counter.dataset.done) return;
   counter.dataset.done = "true";
   const target = Number(counter.dataset.count);
-  const duration = 1100;
-  const start = performance.now();
-
-  function tick(now) {
-    const progress = Math.min((now - start) / duration, 1);
-    const eased = 1 - Math.pow(1 - progress, 3);
-    counter.textContent = `${Math.round(target * eased)}K+`;
-    if (progress < 1) requestAnimationFrame(tick);
-  }
-
-  requestAnimationFrame(tick);
+  counter.textContent = `${target}K+`;
+  counter.classList.add("is-count-ready");
 }
 
 if ("IntersectionObserver" in window && counter) {
@@ -139,3 +130,65 @@ document.querySelector(".email-form").addEventListener("submit", (event) => {
   input.setAttribute("aria-invalid", "false");
   showToast("Subscribed successfully.");
 });
+
+const revealSelectors = [
+  ".nav",
+  ".hero h1",
+  ".hero-copy",
+  ".hero-actions",
+  ".hero-art",
+  ".choice-panel",
+  ".stress h2",
+  ".arrow-icon",
+  ".large-tile",
+  ".transact .portrait",
+  ".review-card",
+  ".transfer-card",
+  ".transact-copy",
+  ".faq-list",
+  ".faq-photo",
+  ".cta",
+  ".footer h2",
+  ".email-form",
+  ".socials",
+  ".footer-col",
+  ".license-line",
+  ".copyright",
+  ".policies",
+];
+
+const revealItems = revealSelectors.flatMap((selector) => Array.from(document.querySelectorAll(selector)));
+
+const hoverSelectors = [
+  "a",
+  "button",
+  ".choice-copy",
+  ".choice-card",
+  ".metric-card",
+  ".large-tile",
+  ".review-card",
+  ".transfer-card",
+  ".cta",
+  ".portrait",
+  ".faq-photo",
+  ".arrow-icon",
+];
+
+hoverSelectors
+  .flatMap((selector) => Array.from(document.querySelectorAll(selector)))
+  .forEach((item) => {
+    item.addEventListener("mouseenter", () => item.classList.add("is-hovered"));
+    item.addEventListener("mouseleave", () => item.classList.remove("is-hovered"));
+  });
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  revealItems.forEach((item, index) => {
+    item.classList.add("reveal-item");
+    item.style.setProperty("--reveal-delay", `${Math.min(index * 35, 210)}ms`);
+  });
+
+  document.documentElement.classList.add("motion-ready");
+  requestAnimationFrame(() => {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+  });
+}

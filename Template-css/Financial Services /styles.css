@@ -24,6 +24,8 @@ body {
   color: #fff;
   font-family: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
   font-stretch: condensed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: geometricPrecision;
   overflow-x: hidden;
 }
 
@@ -264,7 +266,7 @@ input:focus-visible {
 .texture-card {
   position: absolute;
   overflow: hidden;
-  background-image: url("assets/texture.png");
+  background-image: url("assets/texture.png?v=financial-20260603f");
   background-size: cover;
   background-position: center;
 }
@@ -1057,40 +1059,54 @@ input:focus-visible {
 }
 
 .btn-dark:hover,
-.btn-outline-dark:hover {
+.btn-dark.is-hovered,
+.btn-outline-dark:hover,
+.btn-outline-dark.is-hovered {
   background: var(--purple);
   border-color: var(--purple);
   color: #fff;
 }
 
 .btn-light:hover,
-.register:hover {
+.btn-light.is-hovered,
+.register:hover,
+.register.is-hovered {
   background: #000;
   border-color: #000;
   color: #fff;
 }
 
 .btn-outline-light:hover,
+.btn-outline-light.is-hovered,
 .mini-btn:hover,
-.download.secondary:hover {
+.mini-btn.is-hovered,
+.download.secondary:hover,
+.download.secondary.is-hovered {
   background: #fff;
   color: #000;
 }
 
 .download.primary:hover,
+.download.primary.is-hovered,
 .email-form button:hover,
+.email-form button.is-hovered,
 .socials a:hover,
-.app-tabs button:hover {
+.socials a.is-hovered,
+.app-tabs button:hover,
+.app-tabs button.is-hovered {
   background: var(--purple);
   color: #fff;
 }
 
 .nav-links a:hover::after,
-.footer-col a:hover::after {
+.nav-links a.is-hovered::after,
+.footer-col a:hover::after,
+.footer-col a.is-hovered::after {
   transform: scaleX(1);
 }
 
-.faq-list button:hover {
+.faq-list button:hover,
+.faq-list button.is-hovered {
   border-color: rgba(137, 110, 246, 0.8);
   background: rgba(137, 110, 246, 0.08);
 }
@@ -1124,12 +1140,19 @@ input:focus-visible {
   }
 
   .btn:hover,
+  .btn.is-hovered,
   .mini-btn:hover,
+  .mini-btn.is-hovered,
   .download:hover,
+  .download.is-hovered,
   .socials a:hover,
+  .socials a.is-hovered,
   .register:hover,
+  .register.is-hovered,
   .login:hover,
-  .chip:hover {
+  .login.is-hovered,
+  .chip:hover,
+  .chip.is-hovered {
     transform: translateY(-4px);
   }
 
@@ -1168,18 +1191,27 @@ input:focus-visible {
   }
 
   .large-tile:hover,
+  .large-tile.is-hovered,
   .metric-card:hover,
+  .metric-card.is-hovered,
   .choice-card:hover,
+  .choice-card.is-hovered,
   .review-card:hover,
-  .transfer-card:hover {
+  .review-card.is-hovered,
+  .transfer-card:hover,
+  .transfer-card.is-hovered {
     transform: translateY(-8px);
     box-shadow: 0 30px 90px rgba(137, 110, 246, 0.16);
   }
 
   .tile-left:hover .tile-image img,
+  .tile-left.is-hovered .tile-image img,
   .hero-art:hover,
+  .hero-art.is-hovered,
   .portrait:hover,
-  .faq-photo:hover {
+  .portrait.is-hovered,
+  .faq-photo:hover,
+  .faq-photo.is-hovered {
     transform: scale(1.025);
   }
 
@@ -1192,5 +1224,177 @@ input:focus-visible {
     border-color: var(--purple);
     background: rgba(255, 255, 255, 0.04);
     box-shadow: 0 0 0 4px rgba(137, 110, 246, 0.18);
+  }
+}
+
+.brand,
+.login,
+.register,
+.btn,
+.mini-btn,
+.download,
+.chip,
+.socials a,
+.email-form button,
+.app-tabs button,
+.faq-list button,
+.choice-card,
+.metric-card,
+.large-tile,
+.review-card,
+.transfer-card,
+.cta,
+.portrait,
+.faq-photo,
+.arrow-icon {
+  transition: transform 180ms ease, opacity 180ms ease, background 180ms ease, color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+
+.brand:hover,
+.brand.is-hovered,
+.login:hover,
+.login.is-hovered,
+.nav-links a:hover,
+.nav-links a.is-hovered {
+  opacity: 0.78;
+}
+
+.choice-panel:hover {
+  border-color: rgba(137, 110, 246, 0.72);
+}
+
+.choice-card:hover,
+.choice-card.is-hovered,
+.metric-card:hover,
+.metric-card.is-hovered,
+.large-tile:hover,
+.large-tile.is-hovered,
+.review-card:hover,
+.review-card.is-hovered,
+.transfer-card:hover,
+.transfer-card.is-hovered,
+.cta:hover,
+.cta.is-hovered {
+  box-shadow: 0 30px 90px rgba(137, 110, 246, 0.16);
+}
+
+.choice-copy,
+.asterisk,
+.plus,
+.tile-image img,
+.hero-art,
+.hero-curve,
+.hero-spark {
+  transition: transform 220ms ease, opacity 220ms ease, filter 220ms ease;
+}
+
+.choice-copy:hover .asterisk.small,
+.choice-copy.is-hovered .asterisk.small,
+.metric-card:hover .asterisk.ghost,
+.metric-card.is-hovered .asterisk.ghost,
+.transfer-card:hover .asterisk.card-ghost {
+  transform: rotate(18deg) scale(1.06);
+  opacity: 0.22;
+}
+
+.faq-list button:hover .plus,
+.faq-list button.is-hovered .plus {
+  transform: rotate(90deg);
+}
+
+.arrow-icon:hover,
+.arrow-icon.is-hovered {
+  transform: translateX(10px);
+}
+
+.portrait:hover,
+.portrait.is-hovered,
+.faq-photo:hover,
+.faq-photo.is-hovered {
+  filter: saturate(1.08) contrast(1.04);
+}
+
+.is-count-ready {
+  text-shadow: 0 0 24px rgba(255, 255, 255, 0.18);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .motion-ready .reveal-item {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+
+  .motion-ready .hero-art.reveal-item {
+    transform: translate3d(28px, 0, 0) scale(0.985);
+  }
+
+  .motion-ready .reveal-item.is-visible:not(:hover) {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition-delay: var(--reveal-delay, 0ms);
+    transition-duration: 560ms;
+    transition-timing-function: cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+
+  .motion-ready .hero-art.reveal-item.is-visible:not(:hover) {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  .hero-curve {
+    animation: curve-float 4.8s ease-in-out infinite;
+  }
+
+  .hero-spark {
+    animation: spark-pulse 2.4s ease-in-out infinite;
+  }
+
+  .asterisk.ghost,
+  .asterisk.card-ghost {
+    animation: star-drift 7s linear infinite;
+  }
+
+  .tile-left:hover .tile-image img {
+    transform: scale(1.025);
+  }
+
+  .app-tabs button:hover,
+  .app-tabs button.is-hovered,
+  .email-form button:hover,
+  .email-form button.is-hovered {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes curve-float {
+  0%,
+  100% {
+    transform: rotate(-18deg) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: rotate(-18deg) translate3d(10px, -8px, 0);
+  }
+}
+
+@keyframes spark-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: rotate(-24deg) scale(1);
+  }
+
+  50% {
+    opacity: 0.68;
+    transform: rotate(-24deg) scale(1.08);
+  }
+}
+
+@keyframes star-drift {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
   }
 }
