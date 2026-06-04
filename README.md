@@ -8,7 +8,8 @@ Canart 网站设计模版中心 — 按行业分类的高质量网站设计模�
 canart-template-center/
 ├── Template-css/          # 进阶模版（含交互动效）
 ├── Template-css-Basic/    # 基础模版（轻量简洁）
-├── Template预览图/          # 各行业模版预览图
+├── Template预览图/          # 进阶模版预览图
+├── Template-Basic预览图/    # 基础模版预览图
 └── README.md
 ```
 
@@ -43,9 +44,10 @@ canart-template-center/
 | Sport-Healthy | 运动健身 |
 | Travel | 旅游出行 |
 
-## Template预览图
+## 预览图
 
-`Template预览图/` 文件夹按行业分类存放各模版的设计效果图，方便快速浏览选择。
+- `Template预览图/` — 进阶模版（Template-css）的设计效果图，按行业分类
+- `Template-Basic预览图/` — 基础模版（Template-css-Basic）的设计效果图
 
 ## 使用方式
 
